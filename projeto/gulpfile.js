@@ -3,6 +3,8 @@ const concat = require ('gulp-concat')
 const cssmin = require ('gulp-cssmin')
 const rename = require ('gulp-rename')
 const uglify = require ('gulp-uglify')
+const image = require ('gulp-imagemin')
+
 
 
 
@@ -27,8 +29,28 @@ function tarefasJS(){
 
 }
 
+function tarefasImagem(){
+    return gulp.src('./src/imagens/*')
+    .pipe(image({
+        pngquant: true,
+        optipng: false,
+        zopflipng: true,
+        jpegRecompress: false,
+        mozjpeg: true,
+        svgo: true,
+        concurrent: 10,
+        quiet: true
+
+    }))
+
+    .pipe(gulp.dest('./dist/imagens'))
+}
+
+
+
 
 
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
+exports.images = tarefasImagem

@@ -50,20 +50,24 @@ img{
 }
 
  li {
+
+    a{
+        text-decoration: none;
+        color:black;
+        padding: 10px;
+        display: inline-block;
+
+    }
+
+
     display: inline;
     text-decoration: none;
+
+    &:hover{
+        color:rgb(168, 31, 31);
 }
 
-li a {
-    text-decoration: none;
-    color:black;
-    padding: 10px;
-    display: inline-block;
-    
-}
 
-li a:hover{
-    color:rgb(168, 31, 31);
     
 }
 
@@ -90,8 +94,13 @@ li a:hover{
     background-color: black;
 }
 
-.informe a {
-    color: white;
+.informe {
+    a{
+
+        color: white;
+
+    }
+  
 }
 
 .input-grup input{
@@ -178,22 +187,40 @@ footer{
 
 
 
-#redes-h5{
+#redes{
+    h5{
+        transform: translateY(-90%)
+
+    }
     
-    transform: translateY(-90%)
+    
 }
 
-#infor-p{
-    padding-top: 20px;
-}
+#infor{
+    p{
 
-.featured-item h6{
-    transform: translatey(-60px);
-}
+        padding-top: 20px;
+    }
+    
 
-.featured-item h4{
-    transform: translateY(-25px);
-}
+    }
+   
+.featured-item{
+
+    h6{
+        transform: translatey(-60px);
+    }
+
+    h4{
+        transform: translateY(-25px);
+
+    }
+
+    
+
+
+    }
+   
 
 .fa-instagram{
     width: 20px;
